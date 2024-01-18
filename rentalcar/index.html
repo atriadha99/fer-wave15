@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Rent</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+    *{
+      box-sizing: border-box;
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+    }
+    .atasbawah{
+      line-height: 30px;
+    }
+    @media only screen and (min-width: 768px){
+      .container header .hamburger-menu i{
+        display: none;
+      }
+    }
+
+    .container{
+      background-color: #F1F3FF;
+      overflow: hidden;
+    }
+    
+    .container header nav{
+        /* border: 1px solid; */
+        margin-left: 20em;
+      }
+    header{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 30px;
+    }
+    .container header .logo{
+      width: 100px;
+      height: 35px;
+      background-color: rgb(25, 25, 97);
+      border-radius: 12px;
+    }
+    .nav p{
+      display: inline-block;
+      margin-right: 30px;
+    }
+
+    .container .hero{
+      display: flex;
+      column-gap: 40px;
+    }
+
+    .container .hero .hero-text{
+        padding: 30px;
+      }
+
+      .container .hero .hero-text h2{
+        line-height: 1.5em;
+      }
+      .container .hero .hero-text p{
+        margin: 20px 0;
+      }
+
+      button{
+        border: none;
+        background-color: green;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+        padding: 10px;
+      }
+      
+      .our-services{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        column-gap: 100px;
+        margin: 40px 10%;
+      }
+
+      .our-services .detail .text{
+        margin-top: 30px;
+        margin-bottom: 10px;
+      }
+      
+      .icons{
+        font-size: 24px;
+        background-color: #0D28A6;
+        padding: 8px 10px; 
+        clear: both;
+        color: white;
+        border-radius: 100%;
+      }
+
+      .card p{
+        margin: 20px 0;
+
+      }
+      .card .satu{
+        background: #F9CC00;
+      }
+
+      .card .dua{
+        background: #FA2C5A;
+      }
+
+      .card .tiga{
+        background: #0D28A6;
+      }
+
+      .card .empat{
+        background: #5CB85F;
+      }
+      
+      .end-bottom .card{
+        border: 0.5px solid #839AA8;
+        /* background-color: white; */
+        border-radius: 8px;
+        padding: 20px 25px;
+      }
+      
+      .end-bottom .card-group{
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+      }
+      /* .card-title {
+        margin: 120px 136px 120px 136px;
+      } */
+
+      header{
+        margin: 0px 136px 120px 136px;
+      }
+
+      .hero{
+        margin: 0px 0px 0px 136px;
+      }
+
+      .end-bottom .cta{
+        display: flex;
+        justify-content: center;
+        margin: 50px 0;
+        padding: 50px 0;
+        line-height: 50px;
+        text-align: center;
+        color: white;
+        background: #0D28A6;
+        /* width: 100vw; */
+        border-radius: 10px;
+      }
+
+      .cta .cta-text{
+        width: 50%;
+      }
+
+      .faq{
+        display: grid;
+        grid-template-columns: 1fr 150px 1.5fr;
+        gap: 30px;
+      }
+      .faq .select select{
+        display: block;
+        width: 100%;
+        padding: 10px;
+        clear: both;
+      }
+
+      .faq .select select:nth-child(even) {
+        margin: 20px 0;
+      }
+
+      .icon p{
+        font-size: 18px;
+        padding: 5px 8px;
+        border-radius: 100%;
+        color: white;
+        background-color: #0D28A6;
+        display: inline-block;
+      }
+      footer{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 100px 1fr 1fr;
+        justify-content: center;
+        align-content: center;
+        justify-items: center;
+        gap: 10px;
+      }
+
+      @media only screen and (max-width: 768px){
+      .container header nav{
+        display: none;
+      }
+      .container .hero{
+        flex-direction: column;
+        gap: 50px;
+      }
+
+      .container .hero .hero-text{
+        padding: 30px;
+      }
+      
+      .container .hero .hero-image img{
+        width: 100vw;
+      }
+      .our-services{
+        flex-direction: column;
+      }
+
+      .our-services .image img{
+        width: 80vw
+      }
+
+      .our-services .image .detail{
+        width: 100%;
+      }
+
+      .our-services{
+        row-gap: 50px;
+      }
+
+      header{
+        margin: 0px;
+      }
+
+      .hero{
+        margin: 0px;
+
+      }
+
+      .end-bottom{
+        margin: 0px;
+        /* overflow: hidden; */
+      }
+
+      .end-bottom .card-title{
+        text-align: center;
+        /* overflow: hidden; */
+      }
+      .end-bottom .card-group{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 20px;
+        columns: 20px;
+        
+      }
+
+      .end-bottom .card-group .card{
+        flex-direction: column;
+        width: 90vw;
+      }
+      .end-bottom .cta{
+        margin: 20px;
+        line-height: 30px;
+      }
+      .cta .cta-text{
+        width: 70%;
+      }
+
+      .cta .cta-text p{
+        margin-top: 35px;
+        margin-bottom: 30px;
+      }
+      
+
+      .faq{
+        grid-template-columns: 1fr;
+        margin: 0px 20px;
+        row-gap: 10px;
+      }
+
+      .faq .select select:nth-child(odd) {
+        margin: 0;
+      }
+
+
+      .faq .text{
+        margin-top: 20px;
+      }
+
+      footer{
+        grid-template-columns: 1fr;
+        justify-items: start;
+        padding-left: 20px;
+        margin-bottom: 10vh;
+        /* width: 90%; */
+      }
+      .end-bottom .cta{
+        margin: 0px 0px 0px 0px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo" style="color: white; text-align:center;display:flex;align-items:center;justify-content:center">P.E.S</div>
+      <nav class="nav">
+        <p>Our Services</p>
+        <p>Why Us</p>
+        <p>Testimonial</p>
+        <p>FAQ</p>
+      </nav>
+      <div class="hamburger-menu">
+        <i class="fa fa-bars" style="font-size:24px"></i>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-text">
+        <h2>Sewa & Rental Mobil Terbaik di Kawasan (Lokasimu)</h2>
+          <p>
+              Selamat datang di Binar Car Rental. Kami menyediakan mobil
+              kualitas terbaik dengan harga terjangkau. Selalu siap melayani
+              kebutuhanmu untuk sewa mobil selama 24jam
+          </p>
+          <button>Mulai Sewa Mobil</button>
+      </div>
+      <div class="hero-image">
+        <img src="./src/assets/img_car.png" alt="">
+      </div>
+    </section>
+  </div>
+
+  <section class="our-services">
+    <div class="image">
+      <img src="./src/assets/img_service.png" alt="service image">
+    </div>
+
+    <div class="detail">
+        <h2>Best Car Rental for any kind of trip in (Lokasimu)!</h2>
+        <p class="text">Sewa mobil di (Lokasimu) bersama Binar Car Rental jaminan harga lebih murah dibandingkan yang lain, kondisi mobil baru, serta kualitas pelayanan terbaik untuk perjalanan wisata, bisnis, wedding, meeting, dll.</p>
+        <div class="list">
+            <p><i style="font-size:24px;margin-right: 10px;" class="fa fa-check-circle-o" aria-hidden="true"></i> Sewa Mobil Dengan Supir di Bali 12 Jam</p>
+            <p><i style="font-size:24px;margin-right: 10px;" class="fa fa-check-circle-o" aria-hidden="true"></i> Sewa Mobil Lepas Kunci di Bali 24 Jam</p>
+            <p><i style="font-size:24px;margin-right: 10px;" class="fa fa-check-circle-o" aria-hidden="true"></i> Sewa Mobil Jangka Panjang Bulanan</p>
+            <p><i style="font-size:24px;margin-right: 10px;" class="fa fa-check-circle-o" aria-hidden="true"></i> Gratis Antar - Jemput Mobil di Bandara</p>
+            <p><i style="font-size:24px;margin-right: 10px;" class="fa fa-check-circle-o" aria-hidden="true"></i> Layanan Airport Transfer / Drop In Out</p>
+        </div>
+  </div>
+  </section>
+
+  <section class="end-bottom">
+    <div class="card-title" style="margin: 20px 136px 20px 136px;">
+      <h2>Why Us ?</h2>
+      <br>
+      <p><b>Mengapa harus pilih Binar Car Rental</b></p>
+    </div>
+    <br>
+    <div class="card-group" style="margin: 0px 136px 0px 136px;">
+      <div class="card">
+        <i class="fa fa-thumbs-o-up icons satu" aria-hidden="true"></i>
+        <p><b>Mobil Lengkap</b></p>
+        <p><b>Tersedia banyak pilihan mobil, kondisi masih baru, bersih dan terawat</b></p>
+      </div>
+      
+      <div class="card">
+        <i class="fa fa-tag icons dua" aria-hidden="true"></i>
+        <p><b>Harga Murah</b></p>
+        <p><b>Harga murah dan bersaing, bisa bandingkan harga kami dengan rental mobil lain</b></p>
+      </div>
+
+      <div class="card">
+        <i class="fa fa-car icons tiga" aria-hidden="true"></i>
+        <p><b>Layanan 24 Jam</b></p>
+        <p><b>Siap melayani kebutuhan Anda selama 24 jam nonstop. Kami juga tersedia di akhir minggu</b></p>
+      </div>
+
+      <div class="card">
+        <i class="fa fa-check-circle-o icons empat" aria-hidden="true"></i>
+        <p><b>Sopir Profesional</b></p>
+        <p><b>Sopir yang profesional, berpengalaman, jujur, ramah dan selalu tepat waktu</b></p>
+      </div>
+    </div>
+    
+    <style>
+      .testimonial{
+        /* margin-left: -11.7%; */
+        /* width: 100vmax; */
+        /* background-color: red; */
+        margin-top: 80px;
+        margin-bottom: 80px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .cards{
+        background-color: #F1F3FF;
+        padding: 20px;
+        border-radius: 8px;
+        height: 270px;
+      }
+      .cards:nth-child(1){
+        /* background-color: blue; */
+        width: 50%;
+        position: absolute;
+        left: -420px;
+        bottom: 0;
+        top: 0;
+      }
+
+      .cards:nth-child(3){
+        /* background-color: blue; */
+        width: 50%;
+        position: absolute;
+        right: -420px;
+        bottom: 0;
+        top: 0;
+      }
+
+      .cards:nth-child(2){
+        
+        width: 55%;
+        margin: 0 auto;
+        bottom: 0;
+        top: 0;
+      }
+
+    
+      .flex{
+        display: flex;
+        gap: 3px;
+      }
+      .cards .image-cards img{
+        width: 110px;
+        /* background-color: red; */
+      }
+      .cards{
+        position: relative;
+        width: 35%;
+        display: grid;
+        grid-template-columns: 0.5fr 1fr;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+      }
+      .tengah{
+        margin-top: 10px;
+        margin-bottom: 20px;
+        font-weight: bold;
+      }
+      .head-cards{
+        text-align: center;
+        margin-top: 80px;
+      }
+      .head-cards h1{
+        margin-bottom: 20px;
+        font-size: 32px;
+      }
+      .head-cards p {
+        font-weight: 900;
+      }
+    </style>
+    <div class="head-cards">
+      <h1>Testimonial</h1>
+      <p>Berbagai review positif dari para pelanggan kami</p>
+    </div>
+    <div class="testimonial">
+      <div class="card-group">
+        <div class="cards">
+          <div class="image-cards">
+            <img src="./src/assets/img_photo.png" alt="">
+          </div>
+          <div class="">
+            <div class="flex">
+              <img src="./src/assets/icons/star.png" alt="">
+              <img src="./src/assets/icons/star.png" alt="">
+              <img src="./src/assets/icons/star.png" alt="">
+              <img src="./src/assets/icons/star.png" alt="">
+              <img src="./src/assets/icons/star.png" alt="">
+            </div>
+            <p class="tengah">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod”</p>
+            <p>John Dee 32, Bromo</p>
+          </div>
+        </div>
+  
+        <div class="cards">
+          <div class="image-cards">
+            <img src="./src/assets/img_photo.png" alt="">
+          </div>
+          <div class="">
+            <div class="flex">
+              <img src="./src/assets/icons/star.png" alt="">
+              <img src="./src/assets/icons/star.png" alt="">
+              <img src="./src/assets/icons/star.png" alt="">
+              <img src="./src/assets/icons/star.png" alt="">
+              <img src="./src/assets/icons/star.png" alt="">
+            </div>
+            <p class="tengah">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod”</p>
+            <p>John Dee 32, Bromo</p>
+          </div>
+        </div><div class="cards">
+          <div class="image-cards">
+            <img src="./src/assets/img_photo.png" alt="">
+          </div>
+          <div class="">
+            <div class="flex">
+              <img src="./src/assets/icons/star.png" alt="">
+              <img src="./src/assets/icons/star.png" alt="">
+              <img src="./src/assets/icons/star.png" alt="">
+              <img src="./src/assets/icons/star.png" alt="">
+              <img src="./src/assets/icons/star.png" alt="">
+            </div>
+            <p class="tengah">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod”</p>
+            <p>John Dee 32, Bromo</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="cta" style="margin: 0px 136px 120px 136px;">
+      <div class="cta-text">
+        <h2>Sewa Mobil di (Lokasimu) Sekarang</h2>
+        <p><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </b></p>
+        <button>Mulai Sewa Mobil</button>
+      </div>
+    </div>
+
+    <div class="faq" style="margin: 0px 136px 0px 136px;">
+      <div class="text">
+        <h2>Frequently Asked Question</h2>
+        <p><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit</b></p>
+      </div>
+      <div></div>
+      <div class="select">
+        <select class="standard-select">
+          <option value="Option 1">Apa saja syarat yang dibutuhkan?</option>
+        </select>
+        <select class="standard-select">
+          <option value="Option 1">Berapa hari minimal sewa mobil lepas kunci?</option>
+        </select>
+        <select class="standard-select">
+          <option value="Option 1">Berapa hari sebelumnya sabaiknya booking sewa mobil?</option>
+        </select>
+        <select class="standard-select">
+          <option value="Option 1">Apakah Ada biaya antar-jemput?</option>
+        </select>
+        <select class="standard-select">
+          <option value="Option 1">Bagaimana jika terjadi kecelakaan</option>
+        </select>
+      </div>
+    </div>
+
+    <footer style="margin-bottom:120px;margin-top: 100px;padding-left: 130px;" >
+      <div class="address atasbawah">
+        <p><b>Jalan Suroyo No. 161 Mayangan Kota Probolonggo 672000</b></p>
+        <p><b>binarcarrental@gmail.com</b></p>
+        <p><b>081-233-334-808</b></p>
+      </div>
+      <div class="navigation atasbawah">
+        <p>Our Services</p>
+        <p>Why Us</p>
+        <p>Testimonial</p>
+        <p>FAQ</p>
+      </div>
+      <div class="sosmed">
+        <p class="atasbawah"><b>Connect with us</b></p>
+        <div class="icon ">
+          <p><i class="fa fa-facebook"></i></p>
+          <p><i class="fa fa-twitter"></i></p>
+          <p><i class="fa fa-instagram"></i></p>
+          <p><i class="fa fa-envelope-open-o"></i></p>
+        </div>
+      </div>
+      <div class="copywright">
+        <p style="margin-bottom:10px;margin-top:5px;"><b>Copyright Binar 2022</b></p>
+        <div class="logo" style="color: white;background-color: #0D28A6; display: inline-block; padding: 10px 30px;border-radius: 12px;">P.E.S</div>
+      </div>
+    </footer>
+  </section>
+</body>
+</html>

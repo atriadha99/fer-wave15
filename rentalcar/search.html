@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <style>
+        .parent{
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+        input{
+            text-align: center;
+            margin: 20px;
+        }
+        .parent img{
+            width: 30%;
+        }
+        
+    </style>
+</head>
+<body>
+    <input type="text" id="input" />
+    <button id="adds">Search</button>
+    <div class="parent">
+    </div>
+</body>
+</html>
+
+<script>
+    const btn =  document.querySelector('#adds')
+    const parent = document.querySelector('.parent')
+    const URL = 'https://pokeapi.co/api/v2/pokemon'
+    const input = document.getElementById('input')
+    btn.addEventListener('click', search)
+
+    async function search(){
+        parent.innerHTML = '<div>Loading..</div>'
+        const cari = input.value
+        try {
+            const response = await window.fetch(`${URL}/${cari}`)
+            const data = await response.json()
+            parent.innerHTML = `
+                    <img src=${data.sprites.front_default} alt=${data.name}/>
+                    <h3>${data.name}</h3>
+            `
+            // input.value=''
+        } catch (error) {
+            parent.innerHTML = '<div> Something Wrong </div>'
+        }
+    }
+</script>
