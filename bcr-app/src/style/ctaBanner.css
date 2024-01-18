@@ -1,0 +1,50 @@
+.cta-banner {
+  background-color: #0d28a6 !important;
+  border-radius: 13px !important;
+  margin-top: 100px;
+  margin-left: 136px;
+  margin-right: 136px;
+  padding: 64px 270px;
+}
+
+.card-title-cta-banner {
+  font-size: 36px !important;
+  font-style: normal;
+  margin-bottom: 16px !important;
+}
+
+.card-text-cta-banner {
+  font-size: 14px;
+  text-align: center;
+  line-height: 20px;
+  margin-bottom: 32px !important;
+  width: 468px;
+}
+
+.button-mulai-sewa-mobil {
+  border-radius: 2px !important;
+  padding: 8px 12px !important;
+  background-color: #5cb85f !important;
+  font-weight: 700 !important;
+}
+
+@media (max-width: 360px) {
+  .cta-banner {
+    margin-left: 16px;
+    margin-right: 16px;
+    padding: 64px 58px;
+    margin-top: 60px;
+  }
+
+  .card-title-cta-banner {
+    font-size: 24px !important;
+  }
+
+  .card-text-cta-banner {
+    font-size: 14px;
+    text-align: center;
+    line-height: 20px;
+    margin-bottom: 52px;
+    width: fit-content;
+  }
+}
