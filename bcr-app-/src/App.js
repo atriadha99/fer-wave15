@@ -1,12 +1,12 @@
-import "./App.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import CariMobil from "./pages/CariMobil";
-import HasilPencarian from "./pages/HasilPencarian";
-import DetailMobil from "./pages/DetailMobil";
-import Navigation from "./components/Navigation";
-import Foot from "./components/Foot";
 import { Container } from "react-bootstrap";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import "./App.css";
+import Foot from "./components/Foot";
+import Navigation from "./components/Navigation";
+import CariMobil from "./pages/CariMobil";
+import DetailMobil from "./pages/DetailMobil";
+import HasilPencarian from "./pages/HasilPencarian";
+import Home from "./pages/Home";
 
 function App() {
   return (

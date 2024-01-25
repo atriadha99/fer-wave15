@@ -10,7 +10,7 @@ const APICar = {
     if (minPrice) params["minPrice"] = minPrice;
     if (maxPrice) params["maxPrice"] = maxPrice;
 
-    const res = await axiosAdminInstance.get("/v2/car", { params });
+    const res = await axiosAdminInstance.get("v2/car", { params });
     return res;
   },
   findCarById: async (carId) => {
